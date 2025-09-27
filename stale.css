@@ -1,0 +1,316 @@
+/* Noble, Elegant Wedding Design */
+:root {
+	--primary: #7a202e;
+	--gold: #c9a060;
+	--accent: #f8f5f0;
+	--text: #2d2d2d;
+	--bg: #fff;
+	--shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+body {
+	margin: 0;
+	font-family: 'Playfair Display', 'Georgia', serif;
+	background: var(--bg);
+	color: var(--text);
+	font-size: 1.08rem;
+	letter-spacing: 0.01em;
+}
+
+
+header {
+	background: linear-gradient(90deg, var(--primary) 80%, var(--gold) 100%);
+	color: #fff;
+	padding: 2.5rem 0 1.5rem 0;
+	text-align: center;
+	box-shadow: var(--shadow);
+	border-bottom: 2px solid var(--gold);
+	position: relative;
+	overflow: visible;
+}
+
+header::after {
+	content: '';
+	position: absolute;
+	top: 18px;
+	right: 32px;
+	width: 54px;
+	height: 54px;
+	background: url('data:image/svg+xml;utf8,<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="34" rx="14" ry="14" stroke="%23c9a060" stroke-width="2.5"/><ellipse cx="34" cy="20" rx="14" ry="14" stroke="%23c9a060" stroke-width="2.5"/></svg>') no-repeat center/contain;
+	opacity: 0.18;
+	pointer-events: none;
+}
+h2 {
+	position: relative;
+	font-family: 'Playfair Display', 'Georgia', serif;
+	font-size: 2rem;
+	color: var(--primary);
+	margin-bottom: 1.2rem;
+	text-align: center;
+}
+
+h2::after {
+	content: '';
+	display: block;
+	margin: 0.7rem auto 0 auto;
+	width: 60px;
+	height: 2px;
+	background: linear-gradient(90deg, var(--gold) 0%, var(--primary) 100%);
+	border-radius: 2px;
+	opacity: 0.5;
+}
+
+header h1 {
+	font-family: 'Playfair Display', 'Georgia', serif;
+	font-size: 2.7rem;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.3rem;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	gap: 2.5rem;
+	background: var(--accent);
+	padding: 1.2rem 0 1.1rem 0;
+	box-shadow: var(--shadow);
+	border-bottom: 1px solid var(--gold);
+}
+
+nav a {
+	color: var(--primary);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.15rem;
+	padding: 0.5rem 1.2rem;
+	border-radius: 24px;
+	transition: all 0.2s;
+	border: 1px solid transparent;
+}
+
+nav a.active,
+nav a:hover {
+	color: var(--gold);
+	background: var(--primary);
+	border: 1px solid var(--gold);
+	box-shadow: 0 2px 8px rgba(201,160,96,0.08);
+}
+
+main {
+	max-width: 1100px;
+	margin: 2.5rem auto;
+	padding: 0 1.5rem;
+	min-height: 60vh;
+	animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.wedding-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 2.5rem;
+}
+
+.wedding-card {
+	background: var(--accent);
+	border-radius: 18px;
+	box-shadow: var(--shadow);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	border: 1px solid #e5e0d8;
+}
+
+.wedding-card:hover {
+	transform: translateY(-6px) scale(1.03);
+	box-shadow: 0 8px 32px rgba(201,160,96,0.13);
+}
+
+.wedding-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	display: block;
+	border-bottom: 1px solid #e5e0d8;
+}
+
+.wedding-card .info {
+	padding: 1.2rem 1rem 1rem 1rem;
+}
+
+.wedding-card h3 {
+	font-family: 'Playfair Display', 'Georgia', serif;
+	font-size: 1.3rem;
+	color: var(--primary);
+	margin-bottom: 0.3rem;
+}
+
+.wedding-card .price {
+	color: var(--gold);
+	font-weight: bold;
+	font-size: 1.15rem;
+	margin-top: 0.7rem;
+	background: var(--primary);
+	padding: 0.4rem 1rem;
+	border-radius: 16px;
+	display: inline-block;
+	box-shadow: 0 2px 8px rgba(201,160,96,0.08);
+	transition: background 0.2s, color 0.2s;
+}
+
+.restaurant-list {
+display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.5rem;
+}
+
+
+.restaurant-list img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+	border-bottom: 1px solid #d78500;
+}
+
+.restaurant-card {
+	background: var(--accent);
+	border-radius: 18px;
+	box-shadow: var(--shadow);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	border: 1px solid #d78500;
+}
+
+.restaurant-list .info {
+	padding: 0.2rem 0.1rem 1rem 1rem;
+	text-align: center;
+}
+
+.restaurant-list h3{
+	font-family: 'Playfair Display', 'Georgia', serif;
+	font-size: 2.3rem;
+	color: var(--gold);
+	margin-bottom: 0rem;
+}
+
+.restaurant-list:hover {
+	color: var(--gold);
+
+}
+
+
+
+.wedding-card {
+	background: var(--accent);
+	border-radius: 18px;
+	box-shadow: var(--shadow);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	border: 1px solid #e5e0d8;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 2rem;
+}
+
+.gallery img {
+	width: 100%;
+	border-radius: 14px;
+	box-shadow: var(--shadow);
+	transition: transform 0.2s, box-shadow 0.2s;
+	cursor: pointer;
+	border: 1px solid #e5e0d8;
+}
+
+.gallery img:hover {
+	transform: scale(1.06);
+	box-shadow: 0 8px 32px rgba(201,160,96,0.13);
+}
+
+.about {
+	background: var(--accent);
+	border-radius: 18px;
+	box-shadow: var(--shadow);
+	padding: 2.5rem;
+	margin-top: 2.5rem;
+	line-height: 1.8;
+	border: 1px solid #e5e0d8;
+	font-size: 1.13rem;
+}
+
+.about ul {
+	margin-top: 1rem;
+	padding-left: 1.2rem;
+}
+
+.about li {
+	margin-bottom: 0.5rem;
+	color: var(--primary);
+	font-weight: 500;
+}
+
+.contact {
+	margin-top: 2.5rem;
+	background: var(--accent);
+	border-radius: 18px;
+	box-shadow: var(--shadow);
+	padding: 2.5rem;
+	border: 1px solid #e5e0d8;
+}
+
+.contact h3 {
+	margin-top: 0;
+	font-family: 'Playfair Display', 'Georgia', serif;
+	color: var(--primary);
+	font-size: 1.35rem;
+}
+
+.contact-info {
+	font-size: 1.13rem;
+}
+
+.contact-info a {
+	color: var(--gold);
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.2s;
+}
+
+.contact-info a:hover {
+	color: var(--primary);
+}
+
+footer {
+	text-align: center;
+	padding: 2rem 0;
+	background: var(--accent);
+	color: var(--primary);
+	margin-top: 2.5rem;
+	font-size: 1.08rem;
+	border-top: 2px solid var(--gold);
+}
+
+@media (max-width: 700px) {
+	nav {
+		flex-direction: column;
+		gap: 0.7rem;
+	}
+	main {
+		padding: 0 0.5rem;
+	}
+	.wedding-list {
+		gap: 1.2rem;
+	}
+	.gallery {
+		gap: 1rem;
+	}
+	.about, .contact {
+		padding: 1.2rem;
+	}
+}
